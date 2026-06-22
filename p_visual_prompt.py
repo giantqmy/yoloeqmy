@@ -6,8 +6,8 @@ from ultralytics import YOLOE
 from ultralytics.models.yolo.yoloe import YOLOEVPSegPredictor
 
 # Use image 2 as the reference image and image 1 as the target image.
-refer_image = Path("demopic/2.jpg")
-target_image = Path("demopic/4.jpg")
+refer_image = Path("chair/image.png")
+target_image = Path("chair/chair8.jpg")
 output_path = target_image.with_name(f"{target_image.stem}_vp_result.jpg")
 
 # Initialize a YOLOE model
@@ -19,7 +19,7 @@ visual_prompts = dict(
     bboxes=np.array(
         [
           
-            [1456.69, 1105.08, 3022.65, 2263.56]# right monitor in 2.jpg
+            [161.74, 55.12, 661.19, 707.61]# right monitor in 2.jpg
         ],
         dtype=np.float32,
     ),
